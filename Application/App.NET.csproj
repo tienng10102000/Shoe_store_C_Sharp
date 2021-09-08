@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B863B37-D90A-404D-B3BF-94D910C1D0A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App.NET</RootNamespace>
+    <AssemblyName>App.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport21.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MoTa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoTa.Designer.cs">
+      <DependentUpon>MoTa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_HDB.cs">
+      <DependentUpon>CR_HDB.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportHDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportHDB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\SQLConnection.cs" />
+    <Compile Include="Form\Q_DMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Q_DMK.Designer.cs">
+      <DependentUpon>Q_DMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KH.designer.cs">
+      <DependentUpon>KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NV.designer.cs">
+      <DependentUpon>NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SP.designer.cs">
+      <DependentUpon>SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HBN.designer.cs">
+      <DependentUpon>HBN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HDB.designer.cs">
+      <DependentUpon>HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NCC.Designer.cs">
+      <DependentUpon>NCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\QLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\QLTK.Designer.cs">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportHDN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportHDN.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPHDN.Designer.cs">
+      <DependentUpon>RPHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPHDB.Designer.cs">
+      <DependentUpon>RPHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TKHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TKHD.Designer.cs">
+      <DependentUpon>TKHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThemTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThemTK.Designer.cs">
+      <DependentUpon>ThemTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TKBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TKBC.Designer.cs">
+      <DependentUpon>TKBC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport21.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoTa.resx">
+      <DependentUpon>MoTa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_HDB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_HDB.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportHDB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportHDB.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Q_DMK.resx">
+      <DependentUpon>Q_DMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\KH.resx">
+      <DependentUpon>KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NV.resx">
+      <DependentUpon>NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\QLTK.resx">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SP.resx">
+      <DependentUpon>SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HBN.resx">
+      <DependentUpon>HBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HDB.resx">
+      <DependentUpon>HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TKHD.resx">
+      <DependentUpon>TKHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NCC.resx">
+      <DependentUpon>NCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportHDN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportHDN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPHDB.resx">
+      <DependentUpon>RPHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPHDN.resx">
+      <DependentUpon>RPHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThemTK.resx">
+      <DependentUpon>ThemTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TKBC.resx">
+      <DependentUpon>TKBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIBKG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+    <None Include="Resources\timkiem.png" />
+    <None Include="Resources\Snk.jpg.png" />
+    <None Include="Resources\gif.gif" />
+    <None Include="Resources\NV.png" />
+    <None Include="Resources\KH.png" />
+    <None Include="Resources\HDB.png" />
+    <None Include="Resources\BD.png" />
+    <None Include="Resources\QLTK.png" />
+    <None Include="Resources\directory.png" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\bill1.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\iconfinder_floppy_285657.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\anhadd.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Show.png" />
+    <None Include="Resources\icons8-search-64.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\icons8-paid-bill-96.png" />
+    <None Include="Resources\Re_fesh.png" />
+    <None Include="Resources\report.png" />
+    <Content Include="Resources\signin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
